@@ -377,7 +377,7 @@ body.dark-theme {
   opacity: 1;
 } */
 .home_container {
-  margin-top: -1rem;
+  margin-top: 0rem;
   height: calc(100vh - var(--header-height));
   align-content: center;
 }
@@ -412,10 +412,12 @@ body.dark-theme {
 /*========Headers cards==========*/
 .new-header-cards {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: space-evenly;
   height: auto;
-  margin-top: var(--mb-5);
+  margin: 0 auto;
+  margin-top: 4rem;
+
 }
 
 
@@ -441,7 +443,6 @@ body.dark-theme {
   width: 100%;
   height: 100%;
   transform: translateY(-80px);
-  z-index: 99;
 }
 
 .card-image {
@@ -453,14 +454,13 @@ body.dark-theme {
 .about-card-content {
   padding: 10px 20px;
   text-align: center;
-  transform: translateY(-350px);
+  transform: translateY(-330px);
   opacity: 0;
-  transition: 0.3s;
 }
 
 .heder-card:hover > .about-card-content {
   opacity: 1;
-  transform: translateY(-280px);
+  transform: translateY(-380px);
 }
 
 .about-card-content h2 {
@@ -484,14 +484,20 @@ body.dark-theme {
 }
 
 /*========== ABOUT ==========*/
+.about_container{
+  width: 90%;
+  margin: 0 auto;
+}
 .about_data {
   text-align: center;
+  width:100%;
+  margin: 0 auto;
 }
 .about_description {
   margin-bottom: var(--mb-3);
 }
 .about_img {
-  width: 280px;
+  width: 45%;
   border-radius: 0.5rem;
   justify-self: center;
 }
@@ -523,14 +529,15 @@ body.dark-theme {
 /* ====new*/
 .subject-card {
   position: relative;
-  width: 300px;
+  width: 90%;
   height: 350px;
-  margin: 20px;
+  margin: 0 auto;
+
 }
 
 .subject-card .face {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 10px;
@@ -690,9 +697,11 @@ body.dark-theme {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 90%;
   gap: 30px;
   margin-top: 80px;
   animation: fadeInUp 2s ease;
+  text-align: justify;
 }
 .card {
   height: auto;
@@ -741,8 +750,8 @@ body.dark-theme {
   letter-spacing: 1px;
 }
 .card p {
-  text-align: left;
-  width: 100%;
+  text-align: justify;
+  width: auto;
   margin: 12px 0;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -844,6 +853,8 @@ body.dark-theme {
 /*========== APP ==========*/
 .app_data {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .app_description {
   margin-bottom: var(--mb-5);
@@ -866,7 +877,8 @@ body.dark-theme {
   font-size: 2rem;
   font-weight: bold;
   margin-top: var(--mb-2);
-   margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-2);
+
 
 }
 .news {
@@ -952,6 +964,8 @@ body.dark-theme {
 /*========== CONTACT ==========*/
 .contact_container {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .contact_description {
   margin-bottom: var(--mb-2);
@@ -961,6 +975,8 @@ body.dark-theme {
 .footer_container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
 }
 .footer_logo {
   color: var(--logo-dark-color);
@@ -1043,7 +1059,7 @@ body.dark-theme {
 
   .about_img,
   .app_img {
-    width: 380px;
+    width: 100%;
     order: -1;
   }
 
@@ -1057,6 +1073,39 @@ body.dark-theme {
   }
   .contact_button {
     justify-self: center;
+  }
+}
+@media screen and (max-width:768px){
+  .home_subtitle {
+    position: relative;
+    font-size: 7vw;
+    color: #46abcf;
+    -webkit-text-stroke: 0.3 vw #383d52;
+    text-transform: uppercase;
+  }
+  .home_subtitle::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+  }
+  @keyframes animate {
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+    70%,
+    90% {
+      width: 100%;
+    }
   }
 }
 @media screen and (min-width: 768px) {
@@ -1161,7 +1210,7 @@ body.dark-theme {
     top: 0;
     left: 0;
     width: 0;
-    height: 39%;
+    height: 100%;
     color: #01fe87;
     -webkit-text-stroke: 0vw #383d52;
     border-right: 2px solid #01fe87;
@@ -1181,7 +1230,7 @@ body.dark-theme {
   }
 
   .bd-container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -1193,9 +1242,10 @@ body.dark-theme {
 
   .about_container,
   .app_container {
-    column-gap: 7rem;
+    column-gap: 3rem;
   }
 }
+
 @media  (min-width:1025px) and (max-width:1440px) {
   .nav_menu{
     width:115%;
